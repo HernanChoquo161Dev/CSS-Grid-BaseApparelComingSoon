@@ -1,0 +1,39 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  display: grid;
+  grid-template-columns: auto max-content;
+  grid-template-rows: repeat(3, 1fr);
+
+  width: 100vw;
+}
+.item-logo {
+  background-color: aliceblue;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+.item-text {
+  background: antiquewhite;
+  grid-column: 1 / 2;
+  grid-row: 2 / 4;
+}
+.item-image {
+  display: block;
+
+  background-color: aquamarine;
+  grid-column: 2 / 3;
+  grid-row: 1 / 4;
+
+  justify-self: end;
+}
+.item-image img {
+  display: block;
+  width: 100%;
+
+  object-fit: cover;
+}
